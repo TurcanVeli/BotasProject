@@ -1,0 +1,22 @@
+.rootTree{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    margin: 20px;
+    padding: 10px;
+    gap: 20px;
+
+}
+
+.tree-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: beige;
+}
+
+.rootTree p{
+    color: white;
+    font-size: 20px;
+
+}

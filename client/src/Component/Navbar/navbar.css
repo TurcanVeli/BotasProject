@@ -1,0 +1,53 @@
+
+
+.navbar{
+    background-color:#3fb0ac;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+    
+    .navbar-container{
+        width: 90%;
+        height: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    
+    }
+    
+    .logo{
+        color: red;
+        font-size: 40px;
+        font-weight: 700;
+    
+    
+    }
+    
+    
+    .navItems{
+        width: 16%;
+        height: 46%;
+        display: flex;
+        justify-content: space-around;
+    
+    
+    }
+    
+    .navButton{
+    
+        background-color:white;
+        color: black;
+        transition: cubic-bezier(0.165, 0.84, 0.44, 1) 2s ;
+        border-radius: 60px/15px;
+    }
+    
+    .navButton:hover{
+        scale: 1.2;
+        cursor: pointer;
+    }
+    

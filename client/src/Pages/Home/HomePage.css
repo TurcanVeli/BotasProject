@@ -1,0 +1,20 @@
+.homepage-container{
+
+
+    display: flex;
+    flex-direction: column;
+
+     
+ }
+ 
+ .homepage-container p{
+    color: white;
+    font-size: 20px;
+ }
+ 
+ .homepage-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: beige;
+   
+ }
