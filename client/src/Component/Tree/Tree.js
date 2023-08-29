@@ -11,7 +11,6 @@ const Tree = ({ root }) => {
     useEffect(() => {
         const hasC = root.children && root.children.length > 0;
         setHasChildren(hasC)
-        console.log(root.value.name)
     }, []);
 
     return (

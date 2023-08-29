@@ -5,6 +5,9 @@
   "homepage": "http://localhost:3000",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@lukeaus/plain-tree": "^2.1.2",
     "@react-jvectormap/core": "^1.0.4",
     "@react-jvectormap/turkey": "^1.0.1",

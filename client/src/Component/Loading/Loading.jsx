@@ -13,10 +13,7 @@ const Loading = () => {
         <div className="loader">
             <div className="spinner"></div>
         </div>
-
     )
-
-
 
 }
 

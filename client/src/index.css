@@ -5,10 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#173e43;
+  background-color:#cce7e8;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+ 
 }

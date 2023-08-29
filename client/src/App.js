@@ -7,6 +7,9 @@ import Homepage from './Pages/Home/HomePage';
 import Navbar from './Component/Navbar/Navbar';
 import Notfound from './Pages/notFound/Notfound';
 import RootTree from './Pages/RootTree/RootTree';
+import OutageReport from './Pages/OutageReport/OutageReport'
+
+
 
 import {
   createBrowserRouter,
@@ -45,6 +48,11 @@ const router = createBrowserRouter([
         element: <RootTree />,
 
       },
+      {
+        path:"/OutageReport",
+        element: <OutageReport/>
+
+      }
 
     ]
   },

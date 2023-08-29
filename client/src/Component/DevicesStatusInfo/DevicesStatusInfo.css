@@ -1,0 +1,57 @@
+.DevicesStatusInfo-container {
+    display: flex;
+    background-color: #edb879;
+    border-radius: 10px;
+    height: 150px;
+    width: 140px;
+    border: 1px solid;
+    border-color: white;
+    flex-direction: column;
+
+}
+
+.info-title {
+    color: black;
+    font-size: 25px;
+  
+}
+
+
+.DevicesStatusInfo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+}
+
+
+.marker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.status-desc{
+    color: white;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.icon {
+    height: 10px;
+    width: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+
+}
+
+.DevicesStatusInfo-container .marker:nth-child(1) .icon {
+    background-color: green;
+
+}
+
+.DevicesStatusInfo-container .marker:nth-child(2) .icon {
+    background-color: red;
+
+}
