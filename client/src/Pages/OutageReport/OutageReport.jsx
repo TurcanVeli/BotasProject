@@ -62,19 +62,22 @@ const OutageReport = () => {
 
       console.log(Payload)
     }, 5000);
-    //Clearing the interval
     return () => clearInterval(interval);
   }, [isFetched]);
 
 
 
+  //end-start aralığında up olduğu zamanların toplamını alarak %kaç verimli çalıştığını göster.
+ //eğer %50 ve daha fazla verimsiz çalışıyor ise cihaz yine tabloda göster
   return (
     <div className='OutageReport'>
       <div className="report-table-container">
-        <Report Payload={Payload} isFetched={isFetched} />
+        <Report Payload={Payload} isFetched={isFetched}/>
       </div>
-      <div className="secondTable"></div>
-      <div className="thrdtable"></div>
+
+
+      
+    
 
     </div>
   )
