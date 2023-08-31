@@ -10,8 +10,8 @@ import Loading from "../Loading/Loading"
 const Trmap = () => {
 
 
-    const [Devices, setDevices] = useState([]);
-    const [isFetchedapi, setIsFetchedapi] = useState(false);
+    const [Payload, setPayload] = useState([]);
+    const [isFetched, setIsFetched] = useState(false);
     const [delayTime, setDelayTime] = useState(60000)
    
 
@@ -26,7 +26,6 @@ const Trmap = () => {
             const dataStatus = responseStatus.data;
             let status = 1;
             const newDevices = [];
-            const newDevicesInfos = {};
             let i = 0;
             let j = 0;
             let value;
@@ -63,8 +62,8 @@ const Trmap = () => {
                 i += 1
             }
 
-            setDevices(newDevices);
-            setIsFetchedapi(true);
+            setPayload(newDevices);
+            setIsFetched(true);
         } catch (error) {
             console.error("Error fetching user data:", error);
         }
@@ -75,18 +74,16 @@ const Trmap = () => {
         fetchDeviceData()
         const interval = setInterval(() => {
             fetchDeviceData()
-
-            console.log(delayTime)
         }, delayTime);
         //Clearing the interval
         return () => clearInterval(interval);
-    }, [isFetchedapi]);
+    }, [isFetched]);
 
     return (
         <div style={{ margin: '90px', width: "90vw", height: "56vh" }}>
 
             {
-                isFetchedapi ?
+                isFetched ?
                     <VectorMap
                         backgroundColor="#cce7e8"
                         map={trMill}
@@ -97,10 +94,10 @@ const Trmap = () => {
                             width: "10px",
                             height: "90px"
                         }}
-                        markers={Devices}
+                        markers={Payload}
                         labels={{
                             markers: {
-                                render: function render(index) { return Devices[index].name },
+                                render: function render(index) { return Payload[index].name },
                                 
                             }
                         }}
@@ -110,10 +107,10 @@ const Trmap = () => {
                         series={{
                             markers: [{
                                 attribute: 'fill',
-                                scale: ['#008000', '#FF0000'],
-                                values: Devices.reduce(function (p, c, i) { p[i] = c.status; return p }, {}),
-                                min: 1,
-                                max: 0,
+                                scale: ['#FF0000', '#008000'],
+                                values: Payload.reduce(function (p, c, i) { p[i] = c.status; return p }, {}),
+                                min: 0,
+                                max: 1,
                                
                             }],
                         }}
@@ -123,8 +120,8 @@ const Trmap = () => {
                         <div style="background-color: white; border-radius: 6px; min-height: 55px; width: 125px; color: black !important; padding-left: 10px">
                             <p style="color: black !important;">
                                 <b>${label.html()}</b>
-                                <br><b> Cihaz Türü:</b> ${Devices[code]?.cihazTuru || ''}</br>
-                                <b>ip:</b> ${Devices[code]?.ip || ''}
+                                <br><b> Cihaz Türü:</b> ${Payload[code]?.cihazTuru || ''}</br>
+                                <b>ip:</b> ${Payload[code]?.ip || ''}
                             </p>
                         </div>
                     `);

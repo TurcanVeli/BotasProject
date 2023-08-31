@@ -44,13 +44,13 @@ function Navbar() {
       <ul className="show-dropdown main-navbar">
         <div className="hori-selector"></div>
         <li className={activeTab === 0 ? 'active' : ''}>
-          <Link to = "/"><a href="javascript:void(0);"><FontAwesomeIcon icon={faMap} />Home</a></Link>
+          <Link to = "/" className="navbar-link"><FontAwesomeIcon icon={faMap} />Home</Link>
         </li>
         <li className={activeTab === 1 ? 'active' : ''}>
-          <Link to="roottree"><a href="javascript:void(0);"><FontAwesomeIcon icon={faServer} />Devices</a></Link>
+          <Link to="roottree" className="navbar-link"><FontAwesomeIcon icon={faServer} />Devices</Link>
         </li>
         <li className={activeTab === 2 ? 'active' : ''}>
-          <Link to="OutageReport"><a href="javascript:void(0);"><FontAwesomeIcon icon={faFileLines} />Outage Report</a></Link>
+          <Link to="OutageReport" className="navbar-link" ><FontAwesomeIcon icon={faFileLines} />Outage Report</Link>
         </li>
         
       </ul>

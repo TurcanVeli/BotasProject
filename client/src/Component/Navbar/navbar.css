@@ -23,7 +23,7 @@ body {
   float: left;
 }
 
-.main-navbar li a {
+.main-navbar li .navbar-link {
   color: rgb(255, 255, 255);
   text-decoration: none;
   font-size: 15px;
@@ -35,7 +35,7 @@ body {
   position: relative;
 }
 
-.main-navbar .active a {
+.main-navbar .active .navbar-link {
   color: #070707;
   background-color: transparent;
   transition: all 0.7s;

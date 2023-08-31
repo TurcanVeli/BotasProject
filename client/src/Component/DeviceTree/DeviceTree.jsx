@@ -12,7 +12,7 @@ import "./DeviceTree.css"
 const DeviceList = () => {
 
     const [Devices, setDevices] = useState([]);
-    const [isFetchedapi, setIsFetchedapi] = useState(false);
+    const [isFetched, setIsFetched] = useState(false);
     const [isCreatedStack, setIsCreatedStack] = useState(false)
     const [Stack, setStack] = useState([])
 
@@ -48,7 +48,6 @@ const DeviceList = () => {
         }
         index = 0;
         let j = 0;
-        //let DevTree = new Tree(RootNode);
         let isFind = false;
         while (index < stack.length) {
             while (j < Devices.length) {
@@ -80,22 +79,17 @@ const DeviceList = () => {
 
         }
 
-        console.log("Array=")
         setStack(stack)
         setIsCreatedStack(true)
         console.log(Stack[0])
     }
 
-    async function fetchUserData() {
+    async function fetchApi() {
         try {
 
             const response = await axios.get("/DeviceList");
             const data = response.data;
-
-            //setCount(2);
-
             const newDevices = [];
-
             let i = 0;
             while (i < data.length) {
                 newDevices.push({
@@ -109,7 +103,7 @@ const DeviceList = () => {
             }
             setDevices(newDevices);
 
-            setIsFetchedapi(true)
+            setIsFetched(true)
         } catch (error) {
             console.error("Error fetching user data:", error);
         }
@@ -118,12 +112,12 @@ const DeviceList = () => {
 
     useEffect(() => {
 
-        fetchUserData()
-        if (isFetchedapi) {
+        fetchApi()
+        if (isFetched) {
             setTree()
         }
 
-    }, [isFetchedapi]);
+    }, [isFetched]);
 
 
 
@@ -132,7 +126,7 @@ const DeviceList = () => {
         <div className="DeviceList">
 
             {
-                isFetchedapi && isCreatedStack ?
+                isFetched && isCreatedStack ?
                     <Tree  root={Stack[0]}  key={Stack[0].ip}/>
                     //<div></div>
                     : <Loading />

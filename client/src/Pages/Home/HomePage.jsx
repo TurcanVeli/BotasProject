@@ -9,9 +9,7 @@ const Homepage = () => {
 
     return (
         <div className='homepage-container'>
-            <div className='homepage-title'>
-                <h3>Adım 1</h3>
-            </div>
+  
 
             <div className="map-wrapper">
                 <Trmap />
