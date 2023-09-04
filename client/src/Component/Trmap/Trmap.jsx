@@ -12,7 +12,7 @@ const Trmap = () => {
 
     const [Payload, setPayload] = useState([]);
     const [isFetched, setIsFetched] = useState(false);
-    const [delayTime, setDelayTime] = useState(60000)
+    const [delayTime, setDelayTime] = useState(5000)
    
 
 

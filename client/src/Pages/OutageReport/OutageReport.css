@@ -1,5 +1,6 @@
 .OutageReport {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
